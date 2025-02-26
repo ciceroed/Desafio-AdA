@@ -1,11 +1,10 @@
 [project]
-name = "myapp"
+name = "app"
 version = "0.1.0"
 description = ""
 authors = [
     {name = "Cicero Junior",email = "cicero.edjr@gmail.com"}
 ]
-readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "fastapi (>=0.115.8,<0.116.0)",
@@ -14,7 +13,7 @@ dependencies = [
 ]
 
 [tool.poetry]
-packages = [{include = "myapp", from = "src"}]
+packages = [{include = "app", from = "src"}]
 
 
 [build-system]

@@ -1,0 +1,16 @@
+services:
+  backend:
+    build: ./accommodation-app-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./accommodation-app-backend/src:/app/src
+    environment:
+      - DATABASE_URL=sqlite:///./src/app/accommodations.db
+
+  frontend:
+    build: ./React/accommodation-app
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
