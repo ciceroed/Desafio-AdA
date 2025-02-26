@@ -26,9 +26,14 @@ const SearchBar = ({ accommodations, onSearch }) => {
   };
 
   const handleSearch = () => {
-    onSearch(searchLocation);
+    if (!searchLocation.trim()) {
+      onSearch(""); 
+    } else {
+      onSearch(searchLocation);
+    }
   };
-
+  
+  
   return (
     <div className="row mb-4">
       <div className="col-md-8 mx-auto">

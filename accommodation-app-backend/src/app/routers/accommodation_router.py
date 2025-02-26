@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends
 from typing import List, Optional
 from sqlalchemy.orm import Session
-from src.myapp.database.database import get_database_session
-from src.myapp.services.accommodation_service import AccommodationService
-from src.myapp.schemas.accommodation_schemas import AccommodationCreateSchema, AccommodationSchema, MessageResponse
+from src.app.database.database import get_database_session
+from src.app.services.accommodation_service import AccommodationService
+from src.app.schemas.accommodation_schemas import AccommodationCreateSchema, AccommodationSchema, MessageResponse
 
 router = APIRouter(prefix="/acomodacoes", tags=["Acomodações"])
 

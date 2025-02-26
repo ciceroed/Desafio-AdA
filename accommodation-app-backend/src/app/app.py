@@ -1,14 +1,13 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from src.myapp.routers import accommodation_router
-from src.myapp.models import accommodation_model
-from src.myapp.database.database import engine
+from src.app.routers import accommodation_router
+from src.app.models import accommodation_model
+from src.app.database.database import engine
 
 class Application:
     def __init__(self):
         self.app = FastAPI()
         self._setup_cors()
-#        self._setup_database()
         self._include_routers()
 
     def _setup_cors(self):
@@ -29,5 +28,4 @@ class Application:
 app_instance = Application()
 app = app_instance.get_app()
 
-#    def _setup_database(self):
 accommodation_model.Base.metadata.create_all(bind=engine)

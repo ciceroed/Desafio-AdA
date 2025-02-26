@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Session
 from fastapi import HTTPException
 from sqlalchemy.exc import SQLAlchemyError
-from src.myapp.repositories.accommodation_repository import AccommodationRepository
-from src.myapp.schemas.accommodation_schemas import AccommodationCreateSchema
+from src.app.repositories.accommodation_repository import AccommodationRepository
+from src.app.schemas.accommodation_schemas import AccommodationCreateSchema
 
 class AccommodationService:
     def __init__(self, db: Session):

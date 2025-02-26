@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from src.myapp.models.accommodation_model import Accommodation
-from src.myapp.schemas.accommodation_schemas import AccommodationCreateSchema
+from src.app.models.accommodation_model import Accommodation
+from src.app.schemas.accommodation_schemas import AccommodationCreateSchema
 
 class AccommodationRepository:
     def __init__(self, db: Session):

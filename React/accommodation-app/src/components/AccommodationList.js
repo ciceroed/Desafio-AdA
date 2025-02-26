@@ -1,4 +1,4 @@
-import AccommodationCard from "./accommodationCard";
+import AccommodationCard from "./AccommodationCard";
 
 const AccommodationList = ({ accommodations, onSelect }) => {
   return (
